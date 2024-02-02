@@ -1,9 +1,15 @@
 {
-  "name": "api",
+  "name": "node-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "type": "module",
+  "main": "src/main.js",
   "scripts": {
+    "start": "node --env-file=.env src/main.js",
+    "dev": "nodemon",
     "test": "node --test --experimental-test-coverage",
     "test:coverage": "node --test --experimental-test-coverage --test-reporter=lcov --test-reporter-destination=lcov.info",
     "lint": "standard --fix",
@@ -16,6 +22,7 @@
   "devDependencies": {
     "git-commit-msg-linter": "^5.0.6",
     "husky": "^9.0.10",
+    "nodemon": "^3.0.3",
     "standard": "^17.1.0"
   },
   "standard": {
