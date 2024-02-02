@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --test --experimental-test-coverage",
+    "test:coverage": "node --test --experimental-test-coverage --test-reporter=lcov --test-reporter-destination=lcov.info",
     "lint": "standard --fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "pretest:coverage": "./scripts/require-node21.sh"
   },
   "keywords": [],
   "author": "",
