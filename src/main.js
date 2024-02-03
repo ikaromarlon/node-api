@@ -1,8 +1,8 @@
-const Server = require('./infra/server')
+const { getServer } = require('./infra/server')
 
 async function main () {
   try {
-    const server = Server()
+    const server = getServer()
     await server.start()
     console.log('App is running at', server.getAddress())
   } catch (e) {

@@ -1,10 +1,12 @@
 const Fastify = require('fastify')
+const { setupMiddlewares } = require('./middlewares')
 
 let srvInstance = null
 
-function Server () {
+async function getServer () {
   if (!srvInstance) {
     srvInstance = Fastify()
+    await setupMiddlewares(srvInstance)
   }
 
   const start = async () => {
@@ -35,4 +37,4 @@ function Server () {
   }
 }
 
-module.exports = Server
+module.exports = { getServer }
