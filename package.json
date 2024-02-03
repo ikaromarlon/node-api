@@ -5,7 +5,7 @@
   "engines": {
     "node": ">=20.0.0"
   },
-  "type": "module",
+  "type": "commonjs",
   "main": "src/main.js",
   "scripts": {
     "start": "node --env-file=.env src/main.js",
@@ -29,5 +29,8 @@
     "env": [
       "node"
     ]
+  },
+  "dependencies": {
+    "fastify": "^4.26.0"
   }
 }
