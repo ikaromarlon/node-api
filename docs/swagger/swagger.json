@@ -1,0 +1,50 @@
+{
+  "openapi": {
+    "info": {
+      "title": "node-api",
+      "summary": "",
+      "description": "",
+      "termsOfService": "http://swagger.io/terms/",
+      "contact": {
+        "name": "Icaro Silva",
+        "email": "ikaromarlon@gmail.com"
+      },
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+      },
+      "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "http://localhost:3000/api"
+      }
+    ],
+    "tags": [],
+    "components": {
+      "securitySchemes": {
+        "apiKey": {
+          "type": "apiKey",
+          "name": "X-Api-Key",
+          "in": "header",
+          "description": "**API Key** required non-authenticated routes"
+        },
+        "jwt": {
+          "type": "http",
+          "name": "Authorization",
+          "scheme": "bearer",
+          "bearerFormat": "JWT",
+          "description": "**JSON Web Token** sent in the Authorization header"
+        }
+      },
+      "schemas": {
+        "Entities": {},
+        "Errors": {}
+      }
+    },
+    "externalDocs": {
+      "url": "https://swagger.io",
+      "description": "Find more info here"
+    }
+  }
+}

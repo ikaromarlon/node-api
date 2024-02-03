@@ -1,5 +1,6 @@
 const Fastify = require('fastify')
 const { setupMiddlewares } = require('./middlewares')
+const { setupPlugins } = require('./plugins')
 
 let srvInstance = null
 
@@ -7,6 +8,7 @@ async function getServer () {
   if (!srvInstance) {
     srvInstance = Fastify()
     await setupMiddlewares(srvInstance)
+    await setupPlugins(srvInstance)
   }
 
   const start = async () => {
