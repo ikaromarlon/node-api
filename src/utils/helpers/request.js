@@ -1,3 +1,12 @@
+const parseResponseData = async (headers, response) => {
+  const strategies = {
+    'application/json': async () => response.json(),
+    'text/html': async () => response.text()
+  }
+  const strategy = strategies[headers?.Accept ?? 'application/json']
+  return strategy()
+}
+
 const makeRequest = async (method, url, { data, headers } = {}) => {
   const response = await fetch(url, {
     method,
@@ -8,10 +17,12 @@ const makeRequest = async (method, url, { data, headers } = {}) => {
     body: JSON.stringify(data)
   })
 
+  const responseData = parseResponseData(headers, response)
+
   const result = {
     status: response.status,
-    data: await response.json(),
-    headers: Object.fromEntries(response.headers.entries())
+    headers: Object.fromEntries(response.headers.entries()),
+    data: await responseData
   }
 
   return result
