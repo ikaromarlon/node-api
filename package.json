@@ -10,11 +10,12 @@
   "scripts": {
     "start": "node --env-file=.env src/main.js",
     "dev": "nodemon",
-    "test": "node --test --experimental-test-coverage",
-    "test:coverage": "node --test --experimental-test-coverage --test-reporter=lcov --test-reporter-destination=lcov.info",
+    "test": "node --test",
+    "test:coverage": "npm test -- --experimental-test-coverage",
+    "test:report": "npm test:coverage -- --test-reporter=lcov --test-reporter-destination=lcov.info",
     "lint": "standard --fix",
     "prepare": "husky",
-    "pretest:coverage": "./scripts/require-node21.sh"
+    "pretest:report": "./scripts/require-node21.sh"
   },
   "keywords": [],
   "author": "",
