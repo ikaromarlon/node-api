@@ -10,25 +10,25 @@
   "scripts": {
     "start": "node --env-file=.env src/main.js",
     "dev": "nodemon",
-    "test": "node --test",
-    "test:coverage": "npm test -- --experimental-test-coverage",
-    "test:report": "npm test:coverage -- --test-reporter=lcov --test-reporter-destination=lcov.info",
+    "test": "jest --no-cache --runInBand",
     "lint": "standard --fix",
-    "prepare": "husky",
-    "pretest:report": "./scripts/require-node21.sh"
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^29.5.12",
     "git-commit-msg-linter": "^5.0.6",
     "husky": "^9.0.10",
+    "jest": "^29.7.0",
     "nodemon": "^3.0.3",
     "standard": "^17.1.0"
   },
   "standard": {
     "env": [
-      "node"
+      "node",
+      "jest"
     ]
   },
   "dependencies": {

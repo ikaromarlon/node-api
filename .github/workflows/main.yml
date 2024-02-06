@@ -58,14 +58,17 @@ jobs:
       - name: Install dependencies
         run: npm i
 
-      - name: Run tests (no-coverage-report)
-        if: ${{ matrix.node-version != env.NODE_LATEST_VERSION }}
-        run: npm run test:coverage
+      - name: Run tests
+        run: npm test
 
-      - name: Run tests (coverage-report)
-        if: ${{ matrix.node-version == env.NODE_LATEST_VERSION }}
-        run: npm run test:report
+      # - name: Run tests (no-coverage-report)
+      #   if: ${{ matrix.node-version != env.NODE_LATEST_VERSION }}
+      #   run: npm run test:coverage
 
-      - name: Coveralls
-        if: ${{ matrix.node-version == env.NODE_LATEST_VERSION }}
-        uses: coverallsapp/github-action@v2
+      # - name: Run tests (coverage-report)
+      #   if: ${{ matrix.node-version == env.NODE_LATEST_VERSION }}
+      #   run: npm run test:report
+
+      # - name: Coveralls
+      #   if: ${{ matrix.node-version == env.NODE_LATEST_VERSION }}
+      #   uses: coverallsapp/github-action@v2
