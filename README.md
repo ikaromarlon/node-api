@@ -1,4 +1,4 @@
-# NestJS REST API
+# Node.js REST API
 
 REST API boilerplate using Node.js and Fastify.
 
