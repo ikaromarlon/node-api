@@ -1,5 +1,5 @@
 const Fastify = require('fastify')
-const { setupErrors } = require('./errors')
+const { setupErrorHandlers } = require('./errors')
 const { setupMiddlewares } = require('./middlewares')
 const { setupPlugins } = require('./plugins')
 
@@ -8,7 +8,7 @@ let srvInstance = null
 async function getServer () {
   if (!srvInstance) {
     srvInstance = Fastify()
-    await setupErrors(srvInstance)
+    setupErrorHandlers(srvInstance)
     await setupMiddlewares(srvInstance)
     await setupPlugins(srvInstance)
   }
@@ -18,7 +18,7 @@ async function getServer () {
   }
 
   const isConnected = () => {
-    return !!srvInstance.server?._handle
+    return !!srvInstance.server._handle
   }
 
   const getAddress = () => {

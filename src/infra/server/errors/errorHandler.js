@@ -1,6 +1,6 @@
 const { HttpStatus } = require('../../../utils/http')
 
-module.exports = async (fastify) => {
+module.exports = (fastify) => {
   fastify.setErrorHandler((error, req, res) => {
     const status = error.statusCode ?? HttpStatus.INTERNAL_SERVER_ERROR
     return res
