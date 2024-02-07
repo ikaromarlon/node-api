@@ -1,12 +1,12 @@
 # Node.js REST API
 
-REST API boilerplate using Node.js and Fastify.
+Comprehensive REST API Boilerplate leveraging the power of Node.js and Fastify.
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![CI](https://github.com/ikaromarlon/node-api/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/ikaromarlon/node-api/actions/workflows/main.yml)
 [![Coverage Status](https://coveralls.io/repos/github/ikaromarlon/node-api/badge.svg?branch=main)](https://coveralls.io/github/ikaromarlon/node-api?branch=main)
 
-The ideia of this project, besides of having a boilerplate af a REST API, is to compare how to build the same API using different languages and frameworks like:
+The idea of this project, in addition to providing a boilerplate for a REST API, is to compare the methods of building the same API using various languages and frameworks such as:
 
 - Node.js
   - [Vanilla](https://github.com/ikaromarlon/node-api)
@@ -17,20 +17,20 @@ The ideia of this project, besides of having a boilerplate af a REST API, is to 
 - Python
 - what more?
 
-I choose to build a simple REST API for registering users because it may be simple but requires implementation (or would be nice to implement) important concepts like:
+I chose to develop a straightforward REST API for user registration because although it may seem simple, it entails the implementation (or the opportunity to implement) crucial concepts such as:
 
 - Password Encryption
 - Authentication
 - Tokens
-- Cache
-- Persistence
+- Cache Management
+- Data Persistence
 - Notifications
-- HTTP Semantics
-- OpenAPI (Swagger)
+- Understanding of HTTP Semantics
+- Integration with OpenAPI (Swagger)
 - Containerization
-- Tests
-- CI/CD
-- etc...
+- Testing Strategies
+- CI/CD (Gihub Actions)
+- and more...
 
 <!-- Put your application diagram bellow -->
 <!-- ![](docs/image.png) -->
