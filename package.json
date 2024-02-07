@@ -18,6 +18,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@faker-js/faker": "^8.4.0",
     "@types/jest": "^29.5.12",
     "git-commit-msg-linter": "^5.0.6",
     "husky": "^9.0.10",
