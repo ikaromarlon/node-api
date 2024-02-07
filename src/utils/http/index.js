@@ -1,3 +1,5 @@
 module.exports = {
-  HttpStatus: require('./HttpStatus')
+  HttpStatus: require('./HttpStatus'),
+  handleError: require('./handleError'),
+  handleSuccess: require('./handleSuccess')
 }
